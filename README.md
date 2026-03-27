@@ -1,6 +1,6 @@
-# AI Auto Fill Plugin for ONLYOFFICE
+# AI Auto Fill Plugin for Euro-Office
 
-An ONLYOFFICE plugin that automatically fills document form fields using AI-powered field mapping and third-party data integration.
+An Euro-Office plugin that automatically fills document form fields using AI-powered field mapping and third-party data integration.
 
 ## Features
 
@@ -12,15 +12,15 @@ An ONLYOFFICE plugin that automatically fills document form fields using AI-powe
 
 ## Requirements
 
-- ONLYOFFICE Document Server 9.2.0 or higher
-- AI features enabled in ONLYOFFICE
+- Euro-Office Document Server 9.2.0 or higher
+- AI features enabled in Euro-Office
 - Backend service implementing the callback API (see [Third-Party Integration Guide](docs/third-party-integration.md))
 
 ## Installation
 
 ### For End Users
 
-1. Configure the plugin in your ONLYOFFICE Document Server configuration:
+1. Configure the plugin in your Euro-Office Document Server configuration:
 
 ```javascript
 const config = {
@@ -42,7 +42,7 @@ const config = {
 };
 ```
 
-2. Open a PDF form with form fields in ONLYOFFICE
+2. Open a PDF form with form fields in Euro-Office
 3. Click the AI Auto Fill plugin icon in the left panel
 4. Click "Autofill" to automatically populate form fields
 
@@ -65,7 +65,7 @@ The built plugin will be in the `build/` directory.
 
 ### Basic Workflow
 
-1. **Open a Document**: Open a PDF form with form fields in ONLYOFFICE
+1. **Open a Document**: Open a PDF form with form fields in Euro-Office
 2. **Launch Plugin**: Click the AI Auto Fill icon in the plugins panel
 3. **Start Autofill**: Click the "Autofill" button to begin the process
 4. **AI Processing**: The plugin:
@@ -120,20 +120,9 @@ Extracted as: `user.name.first`, `user.name.last`
 ```
 Extracted as: `employees.name`, `employees.role`
 
-## Real-world use case: ONLYOFFICE Docs & Pipedrive integration
-
-This section details how the AI Auto Fill plugin can be used to automatically populate ONLYOFFICE PDF forms with data from Pipedrive.
-
-### Connecting and configuring the plugin
-
-* Navigate to the [ONLYOFFICE app](https://github.com/ONLYOFFICE/onlyoffice-pipedrive) settings within Pipedrive.
-* Locate and enable the corresponding checkbox.
-
-The configuration settings for the AI Auto Fill plugin are inherited from the main [AI plugin](https://www.onlyoffice.com/app-directory/ai) in ONLYOFFICE Docs. To learn how to install and connect various AI models, please refer to the [relevant documentation](https://helpcenter.onlyoffice.com/docs/userguides/ai/configuration.aspx).
-
 ### How the value matching works
 
-The plugin intelligently matches Pipedrive data with the fields in your ONLYOFFICE PDF form without sending sensitive user data to the AI.
+The plugin intelligently matches Pipedrive data with the fields in your Euro-Office PDF form without sending sensitive user data to the AI.
 
 1. **Data request:** The plugin requests available data from Pipedrive. It can retrieve information related to customers, sellers, deals, organizations, and products.
 2. **Field analysis:** It then retrieves the key data (or tag) for all fields within the PDF form.
@@ -144,9 +133,9 @@ The plugin intelligently matches Pipedrive data with the fields in your ONLYOFFI
 
 **1. Opening a PDF form**
 
-To begin, open a PDF form within Pipedrive from the ONLYOFFICE Documents section.
+To begin, open a PDF form within Pipedrive from the Euro-Office Documents section.
 
-Please note: It's important that a PDF form must be created in ONLYOFFICE.
+Please note: It's important that a PDF form must be created in Euro-Office.
 
 **2. Initiating autofill**
 
@@ -174,9 +163,3 @@ The Cancel autofill button will become active, allowing you to undo the changes 
 
 If you have closed the plugin at any point, you can always reopen it from the Plugins tab in the top toolbar of the editor.
 
-## Need help? Feedback & Support 💡
-
-* **🐞 Found a bug?** Please report it by creating an [issue](https://github.com/ONLYOFFICE/plugin-aiautofill/issues).  
-* **👨‍💻 Want to browse the code?** Check out the [source code](https://github.com/ONLYOFFICE/plugin-aiautofill).
-* **❓ Have a question?** Ask our community and developers via [community.onlyoffice.com](https://community.onlyoffice.com/). 
-* **💡 Want to suggest a feature?** Share your ideas on our [feedback platform](https://feedback.onlyoffice.com/forums/966080-your-voice-matters).
